@@ -1,6 +1,8 @@
 import { WorkoutsService } from './../../services/workouts.service';
 import { ProfileService } from './../../services/profile.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {IonSlides} from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -9,8 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage {
 
+  @ViewChild('slides') slides: IonSlides;
   public profile: any;
   public workouts: any[] = [];
+  public index_slides: any = 0;
 
   // Configuração do slider
   public sliderConfig = {
@@ -27,6 +31,14 @@ export class HomePage {
   ngOnInit() {
     this.profile = this.profileService.getProfile();
     this.workouts = this.worksService.getWorkouts();
+  }
+
+
+  /**
+   * Seta o index atual do slider
+   */
+  async getIndex() {
+    this.index_slides = await this.slides.getActiveIndex();
   }
 
 }

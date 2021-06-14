@@ -27,13 +27,14 @@
       </h1>
     </ion-text>
   </div>
-  <ion-slides [options]="sliderConfig">
+  <ion-slides #slides [options]="sliderConfig" (ionSlideDidChange)="getIndex()">
 
-    <ion-slide *ngFor="let workout of workouts">
+    <ion-slide *ngFor="let workout of workouts; let i=index" >
       <div class="card-background-page">
         <ion-card color="dark" class="ion-text-start">
           <img class="opacidade" [src]="workout.img">
-            <ion-row class="ion-align-items-stretch">
+
+            <ion-row *ngIf="index_slides == i" (click)="addNewWorkout()" class="ion-align-items-stretch">
               <ion-col class="ion-text-right">
                 <ion-text color="light" class="ion-margin-vertical">
                   <ion-icon size="large" class="ion-margin-vertical add_button ion-align-items-stretch" name="add-circle-outline"></ion-icon>
@@ -41,10 +42,16 @@
               </ion-col>
               <ion-col class="ion-text-left">
                 <ion-text color="light">
-                    <p>NOVO<br>TREINO</p>
+                    <p>NOVO<br>TREINO </p>
                 </ion-text>
               </ion-col>
             </ion-row>
+
+            <ion-card-content *ngIf="index_slides != i">
+              <ion-card-subtitle *ngIf="workout.stopped" color="dourado">continuar treinando</ion-card-subtitle>
+              <ion-card-title> {{ workout.title }} </ion-card-title>
+            </ion-card-content>
+
         </ion-card>
       </div>
     </ion-slide>
