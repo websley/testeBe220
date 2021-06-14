@@ -1,0 +1,30 @@
+.header_background, ion-item{
+  background-color:#202020;
+  border-radius: 0px 0px 50px 50px;
+  height: 145px;
+}
+
+
+ion-card{
+  margin: auto;
+  border-radius: 50px;
+  margin-top: 25px;
+
+  p{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: var(--ion-color-dourado);
+  }
+}
+
+ion-avatar{
+  // margin-left: auto;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.info_profiles{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+

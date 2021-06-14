@@ -1,0 +1,101 @@
+<ion-header class="ion-no-border" [translucent]="false">
+  <ion-toolbar color="header">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+
+        <ion-fab-button  color="black" size="small">
+          <ion-icon size="small" color="dourado" name="notifications"></ion-icon>
+        </ion-fab-button>
+        <ion-badge class="notification" color="notification"> &nbsp; </ion-badge>
+
+    </ion-buttons>
+    <ion-title class="ion-text-center"> Logo </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-margin-left" color="black" [fullscreen]="true">
+  <app-header [profile]="profile"></app-header>
+
+  <div class="ion-text-left" id="container-fluid">
+    <ion-text color="light">
+      <h1 class="ion-margin-horizontal ion-no-margin">PERSONAL ONLINE
+        <ion-icon color="dourado" class="ion-margin-top" size="large" name="add-circle-outline"></ion-icon>
+      </h1>
+    </ion-text>
+  </div>
+  <ion-slides [options]="sliderConfig">
+
+    <ion-slide *ngFor="let workout of workouts">
+      <div class="card-background-page">
+        <ion-card color="dark" class="ion-text-start">
+          <img class="opacidade" [src]="workout.img">
+            <ion-row class="ion-align-items-stretch">
+              <ion-col class="ion-text-right">
+                <ion-text color="light" class="ion-margin-vertical">
+                  <ion-icon size="large" class="ion-margin-vertical add_button ion-align-items-stretch" name="add-circle-outline"></ion-icon>
+                </ion-text>
+              </ion-col>
+              <ion-col class="ion-text-left">
+                <ion-text color="light">
+                    <p>NOVO<br>TREINO</p>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+        </ion-card>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+
+  <div class="ion-text-left" id="container-fluid">
+    <ion-text color="light">
+      <h1 class="ion-margin-horizontal ion-no-margin"> PROGRAMAS
+        <ion-badge size="small" color="dourado">
+          <ion-text color="light">
+            Novo
+          </ion-text>
+        </ion-badge>
+      </h1>
+    </ion-text>
+  </div>
+  <ion-slides [options]="sliderConfig">
+
+    <ion-slide *ngFor="let workout of workouts">
+      <div class="card-background-page">
+        <ion-card color="dark" class="ion-text-start">
+          <img [src]="workout.img">
+          <ion-card-content>
+            <ion-card-subtitle *ngIf="workout.stopped" color="dourado">continuar treinando</ion-card-subtitle>
+            <ion-card-title> {{ workout.title }} </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+
+  <div class="ion-text-left" id="container-fluid">
+    <ion-text color="light">
+      <h1 class="ion-margin-horizontal ion-no-margin"> CONTEUDOS </h1>
+    </ion-text>
+  </div>
+  <ion-slides [options]="sliderConfig">
+
+    <ion-slide>
+      <div class="card-background-page">
+        <ion-card color="dark" class="ion-text-start">
+
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+
+
+</ion-content>

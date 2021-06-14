@@ -1,0 +1,47 @@
+<ion-grid class="header_background">
+  <ion-row>
+
+      <ion-col size="3">
+        <ion-avatar>
+          <img [src]="profile.foto">
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="9">
+       <div class="info_profiles">
+        <h4 class="ion-no-margin"> {{ profile.name }} </h4>
+        <p class="ion-no-margin" [style.color]="profile.cor">  Nivel {{ profile.nivel }} </p>
+       </div>
+      </ion-col>
+
+  </ion-row>
+  <ion-row >
+    <ion-card color="black">
+      <p class="ion-padding-horizontal">
+       <ion-icon name="accessibility-outline"></ion-icon>
+          Meu Corpo
+       <ion-icon class="ion-margin-start" name="trophy-outline"></ion-icon>
+          Objetivos e Conquistas
+      </p>
+     </ion-card>
+  </ion-row>
+</ion-grid>
+
+
+
+<!-- <ion-list class="header_background" lines="none">
+
+  <ion-item class="header_background" lines="none">
+    <ion-avatar class="ion-margin-start" slot="start">
+      <img size="large" src="http://lorempixel.com.br/200/200">
+    </ion-avatar>
+    <ion-label>
+      <h3>Fulado</h3>
+      <p>Nivel roxo</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item  lines="none">
+
+  </ion-item>
+
+</ion-list> -->

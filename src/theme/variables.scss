@@ -234,3 +234,70 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+:root {
+  --ion-color-black: #000000;
+  --ion-color-black-rgb: 0,0,0;
+  --ion-color-black-contrast: #ffffff;
+  --ion-color-black-contrast-rgb: 255,255,255;
+  --ion-color-black-shade: #000000;
+  --ion-color-black-tint: #1a1a1a;
+
+  --ion-color-header: #202020;
+  --ion-color-header-rgb: 32,32,32;
+  --ion-color-header-contrast: #ffffff;
+  --ion-color-header-contrast-rgb: 255,255,255;
+  --ion-color-header-shade: #1c1c1c;
+  --ion-color-header-tint: #363636;
+
+  --ion-color-dourado: #f07d07;
+  --ion-color-dourado-rgb: 240,125,7;
+  --ion-color-dourado-contrast: #000000;
+  --ion-color-dourado-contrast-rgb: 0,0,0;
+  --ion-color-dourado-shade: #d36e06;
+  --ion-color-dourado-tint: #f28a20;
+
+  --ion-color-notification: #7df0d3;
+  --ion-color-notification-rgb: 125,240,211;
+  --ion-color-notification-contrast: #000000;
+  --ion-color-notification-contrast-rgb: 0,0,0;
+  --ion-color-notification-shade: #6ed3ba;
+  --ion-color-notification-tint: #8af2d7;
+
+}
+
+.ion-color-black {
+  --ion-color-base: var(--ion-color-black);
+  --ion-color-base-rgb: var(--ion-color-black-rgb);
+  --ion-color-contrast: var(--ion-color-black-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-black-contrast-rgb);
+  --ion-color-shade: var(--ion-color-black-shade);
+  --ion-color-tint: var(--ion-color-black-tint);
+}
+
+.ion-color-header {
+  --ion-color-base: var(--ion-color-header);
+  --ion-color-base-rgb: var(--ion-color-header-rgb);
+  --ion-color-contrast: var(--ion-color-header-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-header-contrast-rgb);
+  --ion-color-shade: var(--ion-color-header-shade);
+  --ion-color-tint: var(--ion-color-header-tint);
+}
+
+.ion-color-dourado {
+  --ion-color-base: var(--ion-color-dourado);
+  --ion-color-base-rgb: var(--ion-color-dourado-rgb);
+  --ion-color-contrast: var(--ion-color-dourado-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-dourado-contrast-rgb);
+  --ion-color-shade: var(--ion-color-dourado-shade);
+  --ion-color-tint: var(--ion-color-dourado-tint);
+}
+
+.ion-color-notification {
+  --ion-color-base: var(--ion-color-notification);
+  --ion-color-base-rgb: var(--ion-color-notification-rgb);
+  --ion-color-contrast: var(--ion-color-notification-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-notification-contrast-rgb);
+  --ion-color-shade: var(--ion-color-notification-shade);
+  --ion-color-tint: var(--ion-color-notification-tint);
+}
