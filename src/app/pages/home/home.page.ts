@@ -1,6 +1,6 @@
 import { WorkoutsService } from './../../services/workouts.service';
 import { ProfileService } from './../../services/profile.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {IonSlides} from '@ionic/angular';
 
 
