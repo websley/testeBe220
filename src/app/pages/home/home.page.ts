@@ -12,6 +12,7 @@ export class HomePage {
   public profile: any;
   public workouts: any[] = [];
 
+  // Configuração do slider
   public sliderConfig = {
     spaceBetwenn: 4,
     centeredSlides: false,
@@ -26,7 +27,6 @@ export class HomePage {
   ngOnInit() {
     this.profile = this.profileService.getProfile();
     this.workouts = this.worksService.getWorkouts();
-    console.log(this.workouts);
   }
 
 }

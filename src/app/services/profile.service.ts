@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProfileService {
 
+  // Dados para simulação
   private profile = {
     name: "Leonardo Santos" ,
     nivel: "Roxo",
@@ -14,6 +15,10 @@ export class ProfileService {
 
   constructor() { }
 
+  /**
+   * Retorna os dados de um perfil
+   * @returns objetc
+   */
   getProfile(){
     return this.profile;
   }
